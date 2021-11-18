@@ -1,0 +1,7 @@
+numpy
+tensorflow==2.5
+scikit-image
+opencv-python
+pillow
+pandas
+scikit_learn
