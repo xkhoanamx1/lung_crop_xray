@@ -1,6 +1,7 @@
-Here is my first version in segmented prediction.
+Crop image 
+### 
 
-## UNET
+### UNET
 Using U-net for Medical Segmentation.
 The paper is from https://arxiv.org/pdf/1505.04597.pdf
 
@@ -15,11 +16,11 @@ Some comments of improvement:
 * Skip connection at the triangle bottom can be used 3-4 residual blocks.
 
 
-## Dataset
+### Dataset
 The training is done with two chest x-rays datasets: [Shenzen & Montogomery CXR dataset](https://lhncbc.nlm.nih.gov/LHC-downloads/downloads.html#tuberculosis-image-data-sets). The Montgomery County dataset includes manually segmented lung masks, whereas Shenzhen Hospital dataset was manually segmented by Stirenko et al. 
 
-## Prerequisites
-Python 3.7, Tensorflow 2.0+
+### Prerequisites
+Python 3.6+, Tensorflow 2.0+
 
 ## Results
 Dice coefficient can reach up to 94-95%.
