@@ -37,7 +37,7 @@ The training is done with two chest x-rays datasets: [Shenzen & Montogomery CXR 
 Python 3.6+, Tensorflow 2.0+
 
 ## Results
-
+Dice coefficient can reach up to 93-94% with our training model (unet with resblock), but there are some noises outside lung region. Our cropping algorithm can fix it.
 
 ## References
 https://arxiv.org/pdf/1505.04597.pdf - U-Net: Convolutional Networks for Biomedical Image Segmentation
