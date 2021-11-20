@@ -47,6 +47,8 @@ The training is done with two chest x-rays datasets: [Shenzen & Montogomery CXR 
 Python 3.6+, Tensorflow 2.0+
 
 ## Results
+One example of goof result:
+![grapth2](https://user-images.githubusercontent.com/45206333/142734031-7529f01f-6a61-4211-be72-e378c8922ea7.png)
 
 
 ## References
