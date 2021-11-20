@@ -53,8 +53,9 @@ One example of good result:
 ![grapth2](https://user-images.githubusercontent.com/45206333/142734031-7529f01f-6a61-4211-be72-e378c8922ea7.png)
 
 
-Wrong 8/1263 pictures of SIIM-FISABIO-RSNA COVID-19 Kaggle test data  
-Dice coefficient can reach up to 93-94% with our training model (unet with resblock), but there are some noises outside lung region. Our cropping algorithm can fix it.
+* Wrong 8/1263 pictures of SIIM-FISABIO-RSNA COVID-19 Kaggle test data  
+* Dice coefficient can reach up to 93-94% with our training model (unet with resblock), but there are some noises outside lung region. Our cropping algorithm can fix it.
+* We set crop command at the end of this application, if it is not suitable with your demand you can extract the coordinates(xmin, ymin, xmax, ymax) to define lung positon.
 ## References
 * https://arxiv.org/pdf/1505.04597.pdf - U-Net: Convolutional Networks for Biomedical Image Segmentation
 
