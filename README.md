@@ -6,7 +6,15 @@ A CT scan or computed tomography scan (formerly known as computed axial tomograp
 The most efficency method obivious is U-Net (architecture Unet was originally designed for grey scale (one channel) biomedical image segmentation from microscopy
 data sets). Some experiment has shown the accuracy of U-Net reach over 96 % in validation set (1). Even though this architecture is not compatible with bad scalling X-ray Images (for example: wrong possition when taking picture, patient has lost one part of lung,..). In this case U-net just detect one part or the whole picture as contour.
 Due to these disadvantages, we contribute this repotory, which has ability to detect the contour in very bad lung xray image and compute Dice score to assess the method. In practice we had discovered the higest value of the mean in histogram of 1D picture is back-bone possition. To combine with Unet, finially we observe lung coordinate properly.
+### GENERAL ALGORITHM
+![Lung-segmentation-using-U-Net-before-training-the-convolutional-neural-network-a-the](https://user-images.githubusercontent.com/45206333/142722675-12e401d1-522c-4fa0-a111-2f057dba0f6f.png)
 
+Because X-ray image is not suitable with AI applications so
+In the first step, we convert the Xray image with a high density of pixel(DICOM file) to .png 256x256
+After that images are fed into U-net and stored all predictions in the new folder.
+
+The thirst step is that we calculate the mean of histograms to detect back-bone.
+The final step is that position of the back-bone combine with predictions to have a new lung coordinate.
 
 ### UNET
 Using U-net for Medical Segmentation.
