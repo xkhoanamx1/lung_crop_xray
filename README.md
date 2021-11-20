@@ -5,6 +5,9 @@ A CT scan or computed tomography scan (formerly known as computed axial tomograp
 
 The most efficency method obivious is U-Net (architecture Unet was originally designed for grey scale (one channel) biomedical image segmentation from microscopy
 data sets). Some experiment has shown the accuracy of U-Net reach over 96 % in validation set (1). Even though this architecture is not compatible with bad scalling X-ray Images (for example: wrong possition when taking picture, patient has lost one part of lung,..). In this case U-net just detect one part or the whole picture as contour.
+
+U-Net works very well on the stage of lung part detection, but sometimes it fails in case of very bad lung X-ray picture (the wrong position when taking pictures, or the contrast is not good...). So we need more relatively root point combine with U-net to enhance the accuracy of this method, that is Back-bone position.
+
 Due to these disadvantages, we contribute this repotory, which has ability to detect the contour in very bad lung xray image and compute Dice score to assess the method. In practice we had discovered the higest value of the mean in histogram of 1D picture is back-bone possition. To combine with Unet, finially we observe lung coordinate properly.
 ### GENERAL ALGORITHM
 ![Lung-segmentation-using-U-Net-before-training-the-convolutional-neural-network-a-the](https://user-images.githubusercontent.com/45206333/142722675-12e401d1-522c-4fa0-a111-2f057dba0f6f.png)
@@ -29,6 +32,10 @@ Room for improvements:
 * The resblock is inserted in each left-side Unet block to keep boundaries of original features.
 * Skip connection at the triangle bottom can be used 3-4 residual blocks.
 
+### Back-bone position
+
+![grapth](https://user-images.githubusercontent.com/45206333/142733609-ea0ab76b-f8dc-442f-99e3-7bb574b0898a.png)
+
 
 ### Dataset
 The training is done with two chest x-rays datasets: [Shenzen & Montogomery CXR dataset](https://lhncbc.nlm.nih.gov/LHC-downloads/downloads.html#tuberculosis-image-data-sets). The Montgomery County dataset includes manually segmented lung masks, whereas Shenzhen Hospital dataset was manually segmented by Stirenko et al. 
@@ -37,7 +44,7 @@ The training is done with two chest x-rays datasets: [Shenzen & Montogomery CXR 
 Python 3.6+, Tensorflow 2.0+
 
 ## Results
-Dice coefficient can reach up to 93-94% with our training model (unet with resblock), but there are some noises outside lung region. Our cropping algorithm can fix it.
+
 
 ## References
 https://arxiv.org/pdf/1505.04597.pdf - U-Net: Convolutional Networks for Biomedical Image Segmentation
