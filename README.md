@@ -9,11 +9,11 @@ Due to these disadvantages, we contribute this repotory, which has ability to de
 ### GENERAL ALGORITHM
 ![Lung-segmentation-using-U-Net-before-training-the-convolutional-neural-network-a-the](https://user-images.githubusercontent.com/45206333/142722675-12e401d1-522c-4fa0-a111-2f057dba0f6f.png)
 
-Because X-ray image is not suitable with AI applications so
-In the first step, we convert the Xray image with a high density of pixel(DICOM file) to .png 256x256
-After that images are fed into U-net and stored all predictions in the new folder.
-Following that we calculate the mean of histograms to detect back-bone.
-The final step is that position of the back-bone combine with predictions to have a new lung coordinate.
+Because X-ray image is not suitable with AI applications so:
+* In the first step, we convert the Xray image with a high density of pixel(DICOM file) to .png 256x256
+* After that images are fed into U-net and stored all predictions in the new folder.
+* Following that we calculate the mean of histograms to detect back-bone.
+* The final step is that position of the back-bone combine with predictions to have a new lung coordinate.
 
 ### UNET
 Using U-net for Medical Segmentation.
