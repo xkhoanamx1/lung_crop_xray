@@ -12,8 +12,7 @@ Due to these disadvantages, we contribute this repotory, which has ability to de
 Because X-ray image is not suitable with AI applications so
 In the first step, we convert the Xray image with a high density of pixel(DICOM file) to .png 256x256
 After that images are fed into U-net and stored all predictions in the new folder.
-
-The thirst step is that we calculate the mean of histograms to detect back-bone.
+Following that we calculate the mean of histograms to detect back-bone.
 The final step is that position of the back-bone combine with predictions to have a new lung coordinate.
 
 ### UNET
@@ -39,4 +38,7 @@ Python 3.6+, Tensorflow 2.0+
 
 ## Results
 
+
+## References
+https://arxiv.org/pdf/1505.04597.pdf - U-Net: Convolutional Networks for Biomedical Image Segmentation
 (1)-Article Machine Learning Applications of Convolutional Neural Networks and Unet Architecture to Predict and Classify Demosponge Behavior Dominica Harrison 1,2, Fabio Cabrera De Leo 2,3, Warren J. Gallin 1 , Farin Mir 1 , Simone Marini 4,5 and Sally P. Leys 1,*
