@@ -34,6 +34,9 @@ Room for improvements:
 
 ### Back-bone position
 
+By archiving stunning result in back-bone position, we calculate histogram of x-axis following y-axis (1:256), the highest score (the lightest part in lung X-ray grayscale picture is the back-bone position)
+
+
 ![grapth](https://user-images.githubusercontent.com/45206333/142733609-ea0ab76b-f8dc-442f-99e3-7bb574b0898a.png)
 
 
