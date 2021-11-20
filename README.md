@@ -41,7 +41,9 @@ By archiving stunning result in back-bone position, we calculate histogram of x-
 
 
 ### Dataset
-The training is done with two chest x-rays datasets: [Shenzen & Montogomery CXR dataset](https://lhncbc.nlm.nih.gov/LHC-downloads/downloads.html#tuberculosis-image-data-sets). The Montgomery County dataset includes manually segmented lung masks, whereas Shenzhen Hospital dataset was manually segmented by Stirenko et al. 
+* The training is done with two chest x-rays datasets: [Shenzen & Montogomery CXR dataset](https://lhncbc.nlm.nih.gov/LHC-downloads/downloads.html#tuberculosis-image-data-sets). The Montgomery County dataset includes manually segmented lung masks, whereas Shenzhen Hospital dataset was manually segmented by Stirenko et al. 
+
+* SIIM-FISABIO-RSNA COVID-19 Kaggle.
 
 ### Prerequisites
 Python 3.6+, Tensorflow 2.0+
@@ -51,6 +53,9 @@ One example of goof result:
 ![grapth2](https://user-images.githubusercontent.com/45206333/142734031-7529f01f-6a61-4211-be72-e378c8922ea7.png)
 
 
+Wrong 8/1263 pictures of SIIM-FISABIO-RSNA COVID-19 Kaggle test data  
+Dice coefficient can reach up to 93-94% with our training model (unet with resblock), but there are some noises outside lung region. Our cropping algorithm can fix it.
 ## References
-https://arxiv.org/pdf/1505.04597.pdf - U-Net: Convolutional Networks for Biomedical Image Segmentation
-(1)-Article Machine Learning Applications of Convolutional Neural Networks and Unet Architecture to Predict and Classify Demosponge Behavior Dominica Harrison 1,2, Fabio Cabrera De Leo 2,3, Warren J. Gallin 1 , Farin Mir 1 , Simone Marini 4,5 and Sally P. Leys 1,*
+* https://arxiv.org/pdf/1505.04597.pdf - U-Net: Convolutional Networks for Biomedical Image Segmentation
+
+* (1)-Article Machine Learning Applications of Convolutional Neural Networks and Unet Architecture to Predict and Classify Demosponge Behavior Dominica Harrison 1,2, Fabio Cabrera De Leo 2,3, Warren J. Gallin 1 , Farin Mir 1 , Simone Marini 4,5 and Sally P. Leys 1,*
