@@ -1,4 +1,4 @@
-Crop image (still updating)
+still updating...
 ### 
 ### PROBLEM
 A CT scan or computed tomography scan (formerly known as computed axial tomography or CAT scan) is a medical imaging technique used in radiology to get detailed images of the body noninvasively for diagnostic purposes. CT nowadays becomes more and more important for a variety of purposes including damages to bones, injuries to internal organs, problems with blood flow, stroke, and cancer. Thanks to these advantages people can apply AI technology to analyze X-ray images precisely. If people can handle the algorithm,  it will create a fast and economic method to detect sick as well as possible. With the developing of the AI field especially in image processing and the computation of computers, as well as the proficiency in deep learning algorithms, the accuracy of AI applications can reach or surpass people's work.
