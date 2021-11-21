@@ -1,6 +1,6 @@
 still updating...
 ### 
-### PROBLEM
+## PROBLEM
 A CT scan or computed tomography scan (formerly known as computed axial tomography or CAT scan) is a medical imaging technique used in radiology to get detailed images of the body noninvasively for diagnostic purposes. CT nowadays becomes more and more important for a variety of purposes including damages to bones, injuries to internal organs, problems with blood flow, stroke, and cancer. Thanks to these advantages people can apply AI technology to analyze X-ray images precisely. If people can handle the algorithm,  it will create a fast and economic method to detect sick as well as possible. With the developing of the AI field especially in image processing and the computation of computers, as well as the proficiency in deep learning algorithms, the accuracy of AI applications can reach or surpass people's work.
 
 The most efficency method obivious is U-Net (architecture Unet was originally designed for grey scale (one channel) biomedical image segmentation from microscopy
@@ -44,7 +44,7 @@ By archiving stunning result in back-bone position, we calculate histogram of x-
 * The training is done with two chest x-rays datasets: [Shenzen & Montogomery CXR dataset](https://lhncbc.nlm.nih.gov/LHC-downloads/downloads.html#tuberculosis-image-data-sets). The Montgomery County dataset includes manually segmented lung masks, whereas Shenzhen Hospital dataset was manually segmented by Stirenko et al. 
 * SIIM-FISABIO-RSNA COVID-19 Kaggle.
 
-### Prerequisites
+## Prerequisites
 Python 3.6+, Tensorflow 2.0+
 
 ## Results
