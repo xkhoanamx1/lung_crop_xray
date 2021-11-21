@@ -8,19 +8,19 @@ data sets). Some experiment has shown the accuracy of U-Net reach over 96 % in v
 
 U-Net works very well on the stage of lung part detection, but sometimes it fails in case of very bad lung X-ray picture (the wrong position when taking pictures, or the contrast is not good...). So we need more relatively root point combine with U-net to enhance the accuracy of this method, that is Back-bone position.
 
-Due to these disadvantages, we contribute this repotory, which has ability to detect the contour in very bad lung xray image and compute Dice score to assess the method. In practice we had discovered the higest value of the mean in histogram of 1D picture is back-bone possition. To combine with Unet, finially we observe lung coordinate properly.
+Due to these disadvantages, we contribute this repostory, which has ability to detect the contour in very bad lung xray image and compute Dice score to assess the method. In practice we had discovered the higest value of the mean in histogram of 1D picture is back-bone possition. To combine with Unet, finally we observe lung coordinate properly.
 ### GENERAL ALGORITHM
 ![Lung-segmentation-using-U-Net-before-training-the-convolutional-neural-network-a-the](https://user-images.githubusercontent.com/45206333/142722675-12e401d1-522c-4fa0-a111-2f057dba0f6f.png)
 
 Because X-ray image is not suitable with AI applications so:
-* In the first step, we convert the Xray image with a high density of pixel(DICOM file) to .png 256x256
-* After that images are fed into U-net and stored all predictions in the new folder.
+* In the first step, we convert the Xray image with a high density of pixel (DICOM file) to png format with size of 256x256
+* After that, images are fed into U-net and stored all predictions in the new folder.
 * Following that we calculate the mean of histograms to detect back-bone.
 * The final step is that position of the back-bone combine with predictions to have a new lung coordinate.
 
-### UNET
+### U-NET with residual block
 Using U-net for Medical Segmentation.
-The paper is from [here](https://arxiv.org/pdf/1505.04597.pdf)
+The paper of U-net is from [here](https://arxiv.org/pdf/1505.04597.pdf)
 
 ![image](https://user-images.githubusercontent.com/33461503/122873769-5e735200-d35c-11eb-9c03-ec3099519c9d.png)
 
@@ -29,7 +29,7 @@ The image-mask dataset was augmented with opencv, pillow and scikit image. The i
 
 Room for improvements:
 * The model will be improved if combining between residual block and Unet. 
-* The resblock is inserted in each left-side Unet block to keep boundaries of original features.
+* The residual block is inserted in each left-side Unet block to keep boundaries of original features.
 * Skip connection at the triangle bottom can be used 3-4 residual blocks.
 
 ### Back-bone position
@@ -53,7 +53,7 @@ One example of good result:
 
 
 * Wrong 8/1263 pictures of SIIM-FISABIO-RSNA COVID-19 Kaggle test data  
-* Dice coefficient can reach up to 93-94% with our training model (unet with resblock). With test set, the prediction can include noises outside lung region or only one side of lung (picture above). Our cropping algorithm can fix it.
+* Dice coefficient can reach up to 96-97% with validation set (unet with resblock). With test set, the prediction can include noises outside lung region or only one side of lung (picture above). Our cropping algorithm can fix it.
 * We set crop command at the end of this application, if it is not suitable with your demand you can extract the coordinates(xmin, ymin, xmax, ymax) to define lung positon.
 
 ## References
