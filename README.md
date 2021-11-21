@@ -20,7 +20,7 @@ Because X-ray image is not suitable with AI applications so:
 
 ### UNET
 Using U-net for Medical Segmentation.
-The paper is from https://arxiv.org/pdf/1505.04597.pdf
+The paper is from [here](https://arxiv.org/pdf/1505.04597.pdf)
 
 ![image](https://user-images.githubusercontent.com/33461503/122873769-5e735200-d35c-11eb-9c03-ec3099519c9d.png)
 
@@ -42,7 +42,6 @@ By archiving stunning result in back-bone position, we calculate histogram of x-
 
 ### Dataset
 * The training is done with two chest x-rays datasets: [Shenzen & Montogomery CXR dataset](https://lhncbc.nlm.nih.gov/LHC-downloads/downloads.html#tuberculosis-image-data-sets). The Montgomery County dataset includes manually segmented lung masks, whereas Shenzhen Hospital dataset was manually segmented by Stirenko et al. 
-
 * SIIM-FISABIO-RSNA COVID-19 Kaggle.
 
 ### Prerequisites
@@ -56,7 +55,7 @@ One example of good result:
 * Wrong 8/1263 pictures of SIIM-FISABIO-RSNA COVID-19 Kaggle test data  
 * Dice coefficient can reach up to 93-94% with our training model (unet with resblock). With test set, the prediction can include noises outside lung region or only one side of lung (picture above). Our cropping algorithm can fix it.
 * We set crop command at the end of this application, if it is not suitable with your demand you can extract the coordinates(xmin, ymin, xmax, ymax) to define lung positon.
-## References
-* [https://arxiv.org/pdf/1505.04597.pdf](U-Net: Convolutional Networks for Biomedical Image Segmentation)
 
+## References
+* [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/pdf/1505.04597.pdf)
 * (1)-Article Machine Learning Applications of Convolutional Neural Networks and Unet Architecture to Predict and Classify Demosponge Behavior Dominica Harrison 1,2, Fabio Cabrera De Leo 2,3, Warren J. Gallin 1 , Farin Mir 1 , Simone Marini 4,5 and Sally P. Leys 1,*
