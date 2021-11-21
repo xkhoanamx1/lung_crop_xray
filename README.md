@@ -54,7 +54,7 @@ One example of good result:
 
 * Wrong 8/1263 pictures of SIIM-FISABIO-RSNA COVID-19 Kaggle test data  
 * Dice coefficient can reach up to 96-97% with validation set (unet with resblock). With test set, the prediction can include noises outside lung region or only one side of lung (picture above). Our cropping algorithm can fix it.
-* We set crop command at the end of this application, if it is not suitable with your demand you can extract the coordinates(xmin, ymin, xmax, ymax) in crop_image.py to define lung positon.
+* We set crop command at the end of this application, if it is not suitable with your demand you can extract the coordinates (xmin, ymin, xmax, ymax) in crop_image.py to define lung positon.
 
 ## References
 * [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/pdf/1505.04597.pdf)
